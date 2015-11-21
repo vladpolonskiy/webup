@@ -1,0 +1,77 @@
+/*HEADER MODULE*/
+
+.main-header {
+    position: relative;
+    background: url(../img/bg_lego.jpg) center center; 
+}
+
+.main-header * {
+	-webkit-transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    -ms-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
+}
+
+.main-header .logo-toggle {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 220px;
+    height: 220px;
+    border-radius: 110px;
+    background-image: url(../img/fox-site.png);
+    background-color: #FF4B2A;
+    background-position: 56px 24px;
+    background-repeat: no-repeat;
+    text-align: center;
+    opacity: .8;  
+}
+
+.main-header .logo-toggle:hover {
+    opacity: 1;
+    cursor: pointer;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.main-header .logo-toggle.active {
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.main-header .logo-toggle h1 {
+    display: inline-block;
+    position: relative;
+    font-family: 'DroidSansBold';
+    font-size: 22px;
+    color: #fff;
+    top: 173px;
+}
+
+.main-header .side-nav {
+	display: inline-block;
+    position: absolute;
+    left: -240px;
+    height: 100%;
+    background-color: #000;
+    text-align: left;
+    opacity: 0;
+}
+
+.main-header .side-nav.active {
+	left: 0px; 
+	opacity: .5;
+}
+
+.main-header .side-nav li a {
+	display: inline-block;
+	padding: 15px 60px;
+	color: #fff;
+	font-size: 18px;
+}

@@ -2,7 +2,7 @@
 
 .main-header {
     position: relative;
-    background: url(../img/bg_lego.jpg) center center; 
+    background: #FF8954; 
 }
 
 .main-header * {
@@ -14,8 +14,8 @@
 }
 
 .main-header .logo-toggle {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     width: 220px;
     height: 220px;
     border-radius: 110px;
@@ -30,19 +30,15 @@
 .main-header .logo-toggle:hover {
     opacity: 1;
     cursor: pointer;
-    -webkit-transform: rotate(30deg);
+}
+
+.main-header .logo-toggle.active {
+    opacity: 1;
+	-webkit-transform: rotate(30deg);
     -moz-transform: rotate(30deg);
     -o-transform: rotate(30deg);
     -ms-transform: rotate(30deg);
     transform: rotate(30deg);
-}
-
-.main-header .logo-toggle.active {
-	-webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
 }
 
 .main-header .logo-toggle h1 {

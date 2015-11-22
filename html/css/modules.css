@@ -32,7 +32,7 @@
     height: 220px;
     border-radius: 110px;
     background-image: url(../img/fox-site.png);
-    background-color: #FF8954;
+    background-color: #FF4B2A;
     background-position: 56px 24px;
     background-repeat: no-repeat;
     text-align: center;  
@@ -61,6 +61,16 @@
     position: relative;
     opacity: 0;
     top: -45px;
+    background: #FF4B2A !important;
+}
+
+.tob-bar h1 {
+    font-family: 'DroidSansBold';
+}
+
+.top-bar ul li a {
+    font-family: 'DroidSansBold';
+    background: #FF4B2A !important;
 }
 
 .top-bar.active {

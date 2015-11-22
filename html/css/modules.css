@@ -2,6 +2,9 @@
 
 .main-header {
     position: relative;
+    /*background: url(../img/bg_lego.jpg) center center; */
+        background: linear-gradient(rgba(255, 75, 42, 0.5),rgba(255, 75, 42,0.5)),url(https://leveluptuts.com/sites/all/themes/levelup2014/images/screen.png) no-repeat 0 -50px;
+    color: rgb(255, 75, 42);
     background: #FF8954; 
 }
 

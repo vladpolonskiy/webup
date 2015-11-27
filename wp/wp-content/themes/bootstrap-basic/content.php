@@ -1,12 +1,16 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<div class="blog-post-date">10 May 2015</div>
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
-		<?php if ('post' == get_post_type()) { ?> 
-		<div class="entry-meta">
-			<?php bootstrapBasicPostOn(); ?> 
-		</div><!-- .entry-meta -->
-		<?php } //endif; ?> 
+		<?php if (has_post_thumbnail() && !post_password_required()) :?>
+                <div class="entry-thumbnail single">
+                   <a href='<?php  echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>' rel="lightbox" data-lightbox="image">
+						<?php  the_post_thumbnail(); ?>
+                        <div class="entry-thumbnail-cover single-post-cover"></div>
+                   </a>
+                </div>
+				<hr>
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	
@@ -19,6 +23,11 @@
 	<div class="entry-content">
 		<?php the_content(bootstrapBasicMoreLinkText()); ?> 
 		<div class="clearfix"></div>
+		<?php if ('post' == get_post_type()) { ?> 
+		<div class="entry-meta">
+			<?php bootstrapBasicPostOn(); ?> 
+		</div><!-- .entry-meta -->
+		<?php } //endif; ?> 
 		<?php 
 		/**
 		 * This wp_link_pages option adapt to use bootstrap pagination style.

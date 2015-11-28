@@ -4,6 +4,8 @@
  * 
  * @package webUp
  */
+global $post;
+$class = ($post->post_title === 'Main') ? 'main-class' : '';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>  <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
@@ -23,7 +25,7 @@
 		<!--[if lt IE 8]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix-top">
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix-top <?php echo $class; ?>">
 	        <div class="container-fluid">
 	            <!-- Brand and toggle get grouped for better mobile display -->
 	            <div class="navbar-header">

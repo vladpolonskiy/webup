@@ -221,6 +221,10 @@ aside {
     transition: all .35s;
 }
 
+.navbar-default.main-class {
+    background-color: transparent;
+}
+
 .navbar-default .navbar-nav {
     margin-right: 45px;
     float: right;

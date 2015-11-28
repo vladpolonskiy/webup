@@ -221,10 +221,6 @@ aside {
     transition: all .35s;
 }
 
-.navbar-default.main-class {
-    background-color: transparent;
-}
-
 .navbar-default .navbar-nav {
     margin-right: 45px;
     float: right;
@@ -296,6 +292,10 @@ aside {
 }	
 
 @media(min-width:768px) {
+    .navbar-default.main-class {
+        background-color: transparent;
+    }
+
     .navbar-default {
         border-color: rgba(255,255,255,.3);
     }

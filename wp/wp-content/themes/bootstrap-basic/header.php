@@ -48,4 +48,4 @@ $class = ($post->post_title === 'Main') ? 'main-class' : '';
 	        <!-- /.container-fluid -->
     	</nav>
 				
-		<div id="content" class="row row-with-vspace site-content">
+		<div id="content" class="site-content">

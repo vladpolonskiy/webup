@@ -4,10 +4,12 @@ jQuery(function () {
 	window.addEventListener('scroll', scrollHandler);
 
 	function scrollHandler(e) {
-		if(window.scrollTop > 50) {
-			jQuery(navbar).toggleClass('affix-top', 'affix');
+		if(jQuery(document).scrollTop() > 50) {
+			jQuery(navbar).removeClass('affix-top');
+			jQuery(navbar).addClass('affix');
 		} else {
-			jQuery(navbar).toggleClass('affix', 'affix-top');
+			jQuery(navbar).removeClass('affix');
+			jQuery(navbar).addClass('affix-top');
 		}
 	}
 });

@@ -259,7 +259,7 @@ aside {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: #222;
+    color: rgba(240, 95, 64, 1);
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -271,7 +271,7 @@ aside {
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: rgba(240, 95, 64, 1)!important;
     background-color: transparent;
 }
 
@@ -280,28 +280,33 @@ aside {
     background-color: transparent;
 }
 
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+	background: transparent;
+	border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #f05f40;
+}	
+
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
     }
 
-    .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
+    .navbar-default .navbar-header .navbar-brand,
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        color: #E8DBD3;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
-    }
-
-    .navbar-default .nav > li>a,
-    .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
-    }
-
+    .navbar-default .navbar-header .navbar-brand:focus,
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
+        color: #f05f40;
     }
 
     .navbar-default.affix {
@@ -314,20 +319,63 @@ aside {
         color: #f05f40;
     }
 
-    .navbar-default.affix .navbar-header .navbar-brand:hover,
-    .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
+    .navbar-default.affix .navbar-header .navbar-brand img {
+    	width: 34px;
+    	height: 33px;
+    	top: -7px;
     }
+	
+	.navbar-default.affix .navbar-header .navbar-brand span {
+		top: -4px;
+	}
+
+	.navbar-default.affix .navbar-header .navbar-brand span:hover {
+		opacity: .6;
+	}
 
     .navbar-default.affix .nav > li>a,
     .navbar-default.affix .nav>li>a:focus {
-        color: #222;
+        color: rgba(240, 95, 64, 1);
+        padding-top: 15px;
+    	padding-bottom: 15px;
+    	font-size: 12px;
     }
 
-    .navbar-default.affix .nav > li>a:hover,
-    .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
+    .navbar-default.affix .nav > li>a:hover {
+    	color: rgba(240, 95, 64, .6);
     }
+
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-collapse.collapse.in,
+	.navbar-default .navbar-collapse.collapsing {
+		background-color: rgba(74, 66, 63, 1);
+		border-color: transparent;
+	}
+
+	.navbar-default .navbar-header .navbar-brand img {
+    	width: 41px;
+    	height: 40px;
+    	top: -10px;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+    	margin-left: 15px;
+    }
+
+    .navbar-default .navbar-nav {
+    	float: left;
+    }
+
+    .navbar-default .nav > li>a,
+	.navbar-default .nav>li>a:focus {
+	    text-transform: uppercase;
+	    font-size: 14px;
+	    letter-spacing: 2px;
+    	color: #E8DBD3;
+	}
+
 }
 
 .site-main header {

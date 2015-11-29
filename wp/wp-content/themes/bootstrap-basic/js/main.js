@@ -12,4 +12,9 @@ jQuery(function () {
 			jQuery(navbar).addClass('affix-top');
 		}
 	}
+
+	jQuery('.navbar-default .nav > li').click(function() {
+		jQuery('.navbar-default .nav > li').removeClass('current');
+		jQuery(this).addClass('current');
+	});
 });

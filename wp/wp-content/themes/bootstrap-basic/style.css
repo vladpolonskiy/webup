@@ -312,6 +312,11 @@ aside {
     .navbar-default .nav>li>a:focus:hover {
         color: #f05f40;
     }
+    
+    .navbar-default .nav > li.current > a {
+        color: #f05f40;
+    }
+
 
     .navbar-default.affix {
         border-color: rgba(34,34,34,.05);
@@ -345,7 +350,8 @@ aside {
     	font-size: 12px;
     }
 
-    .navbar-default.affix .nav > li>a:hover {
+    .navbar-default.affix .nav > li>a:hover,
+    .navbar-default.affix .nav > li.current>a {
     	color: rgba(240, 95, 64, .6);
     }
 
@@ -409,6 +415,7 @@ aside {
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 65px;
 }
 
 #content header .header-content .header-content-inner hr {

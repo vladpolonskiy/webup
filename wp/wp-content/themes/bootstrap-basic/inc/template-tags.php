@@ -130,9 +130,10 @@ if (!function_exists('bootstrapBasicCommentsPopupLink')) {
 	 */
 	function bootstrapBasicCommentsPopupLink() 
 	{
-		$comment_icon = '<span class="comment-icon glyphicon glyphicon-comment"><small class="comment-total">%d</small></span>';
-		$comments_icon = '<span class="comment-icon glyphicon glyphicon-comment"><small class="comment-total">%s</small></span>';
-		return comments_popup_link(sprintf($comment_icon, ''), sprintf($comment_icon, '1'), sprintf($comments_icon, '%'), 'btn btn-default btn-xs');
+		$comment_icon = '<div class="comment-total">%d комментарий</div>';
+		$comments_icon = '<div class="comment-total">%s комментариев</div>';
+		$comments0_icon = '<div class="comment-total">%d комментариев</div>';
+		return comments_popup_link(sprintf($comments0_icon, ''), sprintf($comment_icon, '1'), sprintf($comments_icon, '%'), '');
 	}// bootstrapBasicCommentsPopupLink
 }
 
@@ -202,12 +203,12 @@ if (!function_exists('bootstrapBasicMoreLinkText')) {
 	 */
 	function bootstrapBasicMoreLinkText() 
 	{
-		return __('Continue reading <span class="meta-nav">&rarr;</span>', 'bootstrap-basic');
+		return __('Читать далее ' , 'bootstrap-basic');
 	}// bootstrapBasicMoreLinkText
 }
 
 
-if (!function_exists('bootstrapBasicPagination')) {
+if (!function_exists('bootstrapBasicPagination')) { 
 	/**
 	 * display pagination (1 2 3 ...) instead of previous, next of wordpress style.
 	 * 

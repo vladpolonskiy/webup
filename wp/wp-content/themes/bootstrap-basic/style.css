@@ -437,6 +437,7 @@ aside {
     #content header .header-content {
         position: absolute;
         top: 50%;
+        left: 0px;
         padding: 0 50px;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);

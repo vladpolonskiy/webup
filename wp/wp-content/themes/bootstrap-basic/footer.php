@@ -2,33 +2,24 @@
 /**
  * The theme footer
  * 
- * @package bootstrap-basic
+ * @package webup
  */
 ?>
-
 			</div><!--.site-content-->
 			
-			
 			<footer id="site-footer" role="contentinfo">
-				<div id="footer-row" class="row site-footer">
-					<div class="col-md-6 footer-left">
-						<?php 
-						if (!dynamic_sidebar('footer-left')) {
-							printf(__('Powered by %s', 'bootstrap-basic'), 'WordPress');
-							echo ' | ';
-							printf(__('Theme: %s', 'bootstrap-basic'), '<a href="http://okvee.net">Bootstrap Basic</a>');
-						} 
-						?> 
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 head-footer">
+							<?php dynamic_sidebar('footer'); ?>
+						</div>
+						<div class="col-md-12 bottom-footer text-left">
+							<span>Все права защищены © 2015 <a href="#">WebUp Blog</a></span>
+						</div>
 					</div>
-					<div class="col-md-6 footer-right text-right">
-						<?php dynamic_sidebar('footer-right'); ?> 
-					</div>
-				</div>
+				</div>			
 			</footer>
-		</div><!--.container page-container-->
-		
-		
-		<!--wordpress footer-->
+		</div>
 		<?php wp_footer(); ?> 
 	</body>
 </html>

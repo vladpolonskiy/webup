@@ -207,15 +207,6 @@ img.aligncenter {
 	font-size: 18px;
 	margin-top: 0;
 }
-
-
-
-#site-footer {
-	background: #f5f5f5;
-	border-top: 3px solid #ddd;
-	font-size: 12px;
-	padding: 10px;
-}
 /*BLOG SECTION*/
 #main-column .post, 
 #main-column .page {
@@ -429,3 +420,9 @@ img.aligncenter {
     font-size: 12px;
     color: #ccc;
 }
+/*FOOTER*/
+#site-footer {
+	min-height: 440px;
+	background-color: #4A423F;
+}
+/*END FOOTER*/

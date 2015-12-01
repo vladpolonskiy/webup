@@ -40,8 +40,10 @@ $class = ($post->post_title === 'Main') ? 'main-class' : '';
 
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
-					<?php dynamic_sidebar('navbar-right'); ?> 
+					<?php 
+						wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu()));
+						get_search_form();						
+					?>  
 	            </div>
 	            <!-- /.navbar-collapse -->
 	        </div>

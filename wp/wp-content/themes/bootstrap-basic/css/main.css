@@ -422,7 +422,14 @@ img.aligncenter {
 }
 /*FOOTER*/
 #site-footer {
+	position: relative;
 	min-height: 440px;
 	background-color: #4A423F;
 }
+
+.bottom-footer {
+	position: absolute;
+	bottom: 0px;
+}
+
 /*END FOOTER*/

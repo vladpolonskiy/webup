@@ -423,7 +423,7 @@ img.aligncenter {
 /*FOOTER*/
 #site-footer {
 	position: relative;
-	min-height: 440px;
+	/*min-height: 440px;*/
 	background-color: #4A423F;
 }
 

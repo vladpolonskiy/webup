@@ -42,7 +42,7 @@ $class = ($post->post_title === 'Main') ? 'main-class' : '';
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<?php 
 						wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu()));
-						get_search_form();						
+						// get_search_form();						
 					?>  
 	            </div>
 	            <!-- /.navbar-collapse -->

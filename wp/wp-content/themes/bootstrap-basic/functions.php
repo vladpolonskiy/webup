@@ -84,6 +84,6 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/widgets/webup-social/WebupSocialWidget.php';
 require get_template_directory() . '/inc/widgets/webup-recent/WebupResentPostsWidget.php';
-//require get_template_directory() . '/inc/widgets/webup-subscribe/WebupSubscribeWidget.php';
+require get_template_directory() . '/inc/widgets/webup-subscribe/WebupSubscribeWidget.php';
 require get_template_directory() . '/inc/template-widgets-hook.php';
 

@@ -423,12 +423,49 @@ img.aligncenter {
 /*FOOTER*/
 #site-footer {
 	position: relative;
-	/*min-height: 440px;*/
 	background-color: #4A423F;
 }
 
-.bottom-footer {
-	
+.head-footer {
+	margin-top: 40px;
 }
 
+.bottom-footer {
+	margin-top: 80px;
+    color: #E8DBD3;
+}
+
+.bottom-footer > span {
+	border-top: 2px solid #f05f40;
+	display: block;
+	padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+}
 /*END FOOTER*/
+
+/*FOOTER WIDGETS*/
+#site-footer .widget-title {
+	color: #E8DBD3;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#site-footer .tagcloud a {
+	transition: all .35s;
+    border: 2px solid #f05f40;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px !important;
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 11px;
+    text-decoration: none;
+}
+
+#site-footer .tagcloud a:hover {
+	background: #f05f40;
+	color: #E8DBD3;
+
+}
+/*END WIDGETS*/

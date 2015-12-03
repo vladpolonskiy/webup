@@ -1,0 +1,48 @@
+.widget-social {
+	list-style-type: circle;
+	list-style-color: #f05f40;
+	padding-left: 25px;
+}
+
+.widget-social li {
+	color: #f05f40;
+	position: relative;
+	margin-bottom: 14px;
+}
+
+.widget-social li a {
+	color: #f05f40;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.widget-social li a:hover {
+	color: #E8DBD3;
+}
+
+.widget-social li .fa {
+	padding: 5px;
+    border-radius: 14px;
+	transition: all .35s;
+    border: 2px solid #f05f40;
+}
+
+.widget-social li .fa:hover {
+	background: #f05f40;
+}
+
+.widget-social li .fa-facebook {
+	width: 27px;
+    height: 27px
+}
+
+.widget-social li .fa-facebook:before {
+	position: relative;
+	left: 2px;
+}
+
+.social-label {
+	display: inline-block;
+    width: 250px;
+}

@@ -12,7 +12,11 @@ class Subscribe_Widget extends WP_Widget {
 	 * Sets up the widgets name etc
 	 */
 	public function __construct() {
-		// widget actual processes
+		parent::__construct(
+                'Subscribe',
+                __('Subscribe', 'webup'), // Name
+                array('description' => __('Subscribe to our news', 'webup'))
+        );
 	}
 
 	/**
@@ -22,7 +26,28 @@ class Subscribe_Widget extends WP_Widget {
 	 * @param array $instance
 	 */
 	public function widget( $args, $instance ) {
-		// outputs the content of the widget
+        if(!empty($instance['button'])) {
+	        echo $args['before_widget'];
+		    if(!empty($instance['title'])) {
+	            $title = $args['before_title'] . $instance['title'] . $args['after_title'];
+	            echo $title;
+	        }
+	        ?>
+	        <form class="form-inline form-subscribe">
+	          <div class="form-group">
+			    <label class="sr-only" for="exampleInputEmail3">Name</label>
+			    <input type="text" class="form-control" id="subscriber-name" placeholder="Имя">
+			  </div>
+			  <div class="form-group">
+			    <label class="sr-only" for="exampleInputPassword3">Email</label>
+			    <input type="email" class="form-control" id="subscriber-email" placeholder="E-mail">
+			  </div>
+			  <button type="submit" class="btn"><?php echo $instance['button']?></button>
+			</form>
+	        <?php
+	        echo $args['after_widget'];
+	    }
+       
 	}
 
 	/**
@@ -31,7 +56,20 @@ class Subscribe_Widget extends WP_Widget {
 	 * @param array $instance The widget options
 	 */
 	public function form( $instance ) {
-		// outputs the options form on admin
+		 if(empty($instance)) {
+            $instance['title'] = 'Подписка';
+            $instance['button'] = 'Подпишусь';
+        }
+        foreach($instance as $key => $value) {
+            $id = $this->get_field_id($key);
+            $name = $this->get_field_name($key);
+            ?>
+            <p>
+                <label for="<?php echo $id; ?>"><?php echo ucfirst($key); ?></label> 
+                <input class="widefat" id="<?php echo $id; ?>" name="<?php echo $name; ?>" type="text" value="<?php echo esc_attr($value); ?>">
+            </p>
+            <?php
+        }
 	}
 
 	/**
@@ -41,7 +79,11 @@ class Subscribe_Widget extends WP_Widget {
 	 * @param array $old_instance The previous options
 	 */
 	public function update( $new_instance, $old_instance ) {
-		// processes widget options to be saved
+		$instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['button'] = (!empty($new_instance['button']) ) ? strip_tags($new_instance['button']) : '';
+
+        return $instance;
 	}
 }
 

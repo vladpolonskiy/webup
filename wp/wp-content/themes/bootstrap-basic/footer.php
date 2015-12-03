@@ -10,7 +10,7 @@
 			<footer id="site-footer" role="contentinfo">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-12 head-footer">
+						<div class="head-footer">
 							<?php dynamic_sidebar('footer'); ?>
 						</div>
 						<div class="col-md-12 bottom-footer text-left">

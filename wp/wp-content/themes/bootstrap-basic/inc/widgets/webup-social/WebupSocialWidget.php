@@ -30,17 +30,18 @@ class Social_Icons extends WP_Widget {
     public function widget($args, $instance) {
         $links = Array();
         if(!empty($instance['vk'])) {
-            $links['vk'] = '<li><a class="vk-label">Vkontakte</a> : <a class="vk" href="' . $instance['vk'] . '"></a></li>';
+            $links[] = '<li><a class="social-label vk-label">Vkontakte</a> <a class="vk fa fa-vk" href="' . $instance['vk'] . '"></a></li>';
         }
         if(!empty($instance['fb'])) {
-            $links['fb'] = '<li><a class="fb-label">Facebook</a> : <a class="fb" href="' . $instance['fb'] . '"></a></li>';
+            $links[] = '<li><a class="social-label fb-label">Facebook</a> <a class="fb fa fa-facebook" href="' . $instance['fb'] . '"></a></li>';
         }
         if(!empty($instance['youtube'])) {
-            $links['youtube'] = '<li><a class="youtube-label">Youtube</a> : <a class="youtube" href="' . $instance['youtube'] . '"></a></li>';
+            $links[] = '<li><a class="social-label youtube-label">Youtube</a> <a class="youtube fa fa-youtube-play" href="' . $instance['youtube'] . '"></a></li>';
         }
         if(!empty($instance['google'])) {
-            $links['google'] = '<li><a class="google-label">Google +</a> : <a class="google" href="' . $instance['google'] . '"></a></li>';
+            $links[] = '<li><a class="social-label google-label">Google +</a> <a class="google fa fa-google-plus" href="' . $instance['google'] . '"></a></li>';
         }
+        echo $args['before_widget'];
         ?>
         
         <?php   if(!empty($instance['title'])) {
@@ -48,7 +49,7 @@ class Social_Icons extends WP_Widget {
                     echo $title;
                 }
         ?>
-        <ul>
+        <ul class="widget-social">
         <?php   for ($i = 0, $count = count($links); $i < $count; $i++) {
                     if (!empty($links[$i])) {
                         echo $links[$i];
@@ -57,6 +58,7 @@ class Social_Icons extends WP_Widget {
         ?>
         </ul>
         <?php
+        echo $args['after_widget'];
     }
 
     /**

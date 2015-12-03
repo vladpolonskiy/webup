@@ -643,3 +643,79 @@ body {
         width: 110px;
     }
 }
+
+/*Single post template*/
+.relatedposts {
+    overflow: hidden;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.similar-post h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.relatedthumb {
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+    border: 1px solid #eee;
+    border-bottom: 4px solid #e5e5e5;
+    /*overflow: hidden;*/
+}
+.relatedthumb:last-child {
+    margin-right: 0;
+}
+.relatedthumb .text {
+    padding: 11px 9px 20px 9px; 
+}
+.relatedthumb .title {
+   padding: 11px 9px 10px 9px;
+   border-bottom: 1px solid #eee;
+}
+.relatedthumb img {
+    width: 100%;
+    height: auto;
+}
+
+.relatedthumb  a {
+    font-weight: 600;
+    line-height: 22px;
+    font-size: 18px;
+    display: block;
+    color: #2c3e50;
+}
+
+.relatedthumb  a:hover {
+    color: #f05f40;
+    text-decoration: none;
+}
+.relatedthumb .read_lesson {
+    border-color: #f05f40;
+    color: #fff;
+    background-color: #f05f40;
+    font-size: 16px;
+    text-align: center;
+    line-height: 28px;
+    padding: 0 20px;
+    padding-bottom: 2px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+.relatedthumb .read_lesson:hover {
+    color: #fff;
+}
+.social-btn-post {
+    padding: 0px 30px 30px 30px;
+    border: 1px solid #eee;
+    background: #F5F5F5;
+}
+
+.social-btn-post h3 {
+    text-align: center;
+}
+
+/*End Single post template*/

@@ -15,6 +15,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	font-size: 14px;
+	text-transform: uppercase;
 }
 
 .widget-social li a:hover {

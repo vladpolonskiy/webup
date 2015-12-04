@@ -11,6 +11,7 @@
 	color: #f05f40;
 	border: 2px solid #f05f40;
     border-radius: 17px;
+    width: 260px;
 }
 
 .form-subscribe .form-control:active,
@@ -27,7 +28,7 @@
 .form-subscribe .btn {
 	transition: all .35s;
 	display: block;
-    width: 197px;
+    width: 260px;
     margin-top: 35px;
     color: #E8DBD3;
     background: #f05f40;
@@ -37,4 +38,10 @@
 .form-subscribe .btn:hover {
 	background: transparent;
 	color: #f05f40;
+}
+
+@media screen and (max-width: 991px) {
+	.head-footer .col-sm-6:last-child {
+		width: 51%;
+	}
 }

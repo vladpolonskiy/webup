@@ -47,3 +47,9 @@
 	display: inline-block;
     width: 250px;
 }
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	.social-label {
+		width: 168px;
+	}
+}

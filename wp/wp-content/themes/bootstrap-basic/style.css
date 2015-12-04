@@ -1,17 +1,15 @@
 /*
-Theme Name: Bootstrap Basic
+Theme Name: Webup Theme
 Theme URI: 
 Author: Vee Winch
-Author URI: http://okvee.net
-Description: Bootstrap v.3 basic theme for developers to build their new theme very fast and easy.
-Version: 1.0.6
+Author URI: 
+Description: 
+Version: 0.0.1
 License: MIT
 License URI: http://opensource.org/licenses/MIT
-Text Domain: bootstrap-basic
+Text Domain: webup
 Domain Path: /languages/
-Tags: white, gray, light, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready
-
-This theme built with Twitter Bootstrap v.3. It is basic theme with basic style for build new theme with Bootstrap.
+Tags: white, gray, light, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready.
 
 */
 
@@ -147,6 +145,7 @@ body {
 }
 
 body {
+    position: relative;
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
     
 }
@@ -215,13 +214,20 @@ aside {
 .no-padding {
     padding: 0;
 }
-.logged-in .navbar-fixed-top {
-    margin-top: 30px;
+
+.navbar-default.main-class {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
 }
+
 .navbar-default {
+    position: relative;
+    top: 0px;
     border-color: rgba(34,34,34,.05);
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     background-color: #4A423F;
+    border-radius: 0px;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -303,7 +309,7 @@ aside {
     }
 
     .navbar-default {
-        border-color: rgba(255,255,255,.3);
+        border-bottom-color: rgba(255,255,255,.3);
     }
 
     .navbar-default .navbar-header .navbar-brand,

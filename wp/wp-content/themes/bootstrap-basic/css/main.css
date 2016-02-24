@@ -194,6 +194,7 @@ img.aligncenter {
 #sidebar-left .widget,
 #sidebar-right .widget {
 	border: 1px solid #eee;
+	border-bottom: 4px solid #e5e5e5;
 	margin-bottom: 20px;
 	overflow: hidden;
 	padding: 10px;
@@ -319,7 +320,92 @@ img.aligncenter {
 .pagination>.active>span:hover {
 	color: #e74c3c;
 }
+/*Widget Search*/
+.widget_search .widget-title {
+	color: #2c3e50;
+    position: relative;
+    display: inline-block;
+    padding: 15px 60px 14px 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
 
+.widget_search .widget-title:before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 19px;
+    width: 3px;
+    height: 12px;
+    background-color: #c1cdd0;
+    transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+}
+/*Search box*/
+.search-form {
+    float: right;
+    position: relative;
+    top: 13px;
+    cursor: pointer;
+    margin-right: 13px;
+}
+.affix .search-form {
+    top: 8px;
+}
+
+.search-form .fa-search {
+    transition: all 1s ease-out;
+    position: relative;
+    width: 36px;
+    top: -5px;
+}
+
+.search-form.clicked .fa-search {
+    width: 130px;
+}
+
+.search-form .fa-search:before {
+    transition: all 1s ease-out;
+    color: #f05f40;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    z-index: 9999;
+}
+
+.search-form.clicked .fa-search:before {
+    transform: rotate(-270deg); 
+}
+
+#form-search-input {
+    border-radius: 22px;
+    padding-left: 19px;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    border: 2px solid #f05f40;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-size: 14px;
+    color: #f05f40;
+}
+
+.search-form.clicked #form-search-input {
+    padding-left: 26px;
+}
+
+@media screen and (max-width: 768px) {
+   .search-form {
+        margin-right: 5px;
+        margin-top: 12px;
+   } 
+
+   .search-form.clicked .fa-search {
+        width: 110px;
+    }
+}
+/*End Widget Search*/
 /*Widget category*/
 .widget_categories {
 	padding-left: 0;
@@ -441,6 +527,7 @@ img.aligncenter {
 	padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 25px;
+    text-align: center;
 }
 /*END FOOTER*/
 
@@ -449,6 +536,10 @@ img.aligncenter {
 	color: #E8DBD3;
 	margin-top: 40px;
 	margin-bottom: 40px;
+}
+
+#site-footer .tagcloud {
+	max-width: 420px;
 }
 
 #site-footer .tagcloud a {

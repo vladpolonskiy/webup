@@ -50,7 +50,7 @@ if (!function_exists('webupWidgetsInit')) {
 		register_sidebar(array(
 			'name'          => __('Footer', 'webup'),
 			'id'            => 'footer',
-			'before_widget' => '<div class="col-md-4">',
+			'before_widget' => '<div class="col-md-4 col-sm-6">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h1 class="widget-title">',
 			'after_title'   => '</h1>',

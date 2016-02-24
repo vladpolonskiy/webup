@@ -33,7 +33,7 @@ class Subscribe_Widget extends WP_Widget {
 	            echo $title;
 	        }
 	        ?>
-	        <form class="form-inline form-subscribe">
+	        <form class="form-subscribe">
 	          <div class="form-group">
 			    <label class="sr-only" for="exampleInputEmail3">Name</label>
 			    <input type="text" class="form-control" id="subscriber-name" placeholder="Имя">

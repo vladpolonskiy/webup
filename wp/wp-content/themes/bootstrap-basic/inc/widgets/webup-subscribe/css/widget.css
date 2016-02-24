@@ -18,11 +18,10 @@
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #f05f40;
 }
     
-.form-subscribe input[type="text"]::-webkit-input-placeholder,
-.form-subscribe input[type="email"]::-moz-placeholder { 
-	color: #E8DBD3;
-}
-
+.form-subscribe .form-control::-webkit-input-placeholder {color: #E8DBD3;}
+.form-subscribe .form-control::-moz-placeholder {color: #E8DBD3;}
+.form-subscribe .form-control:-moz-placeholder {color: #E8DBD3;}
+.form-subscribe .form-control:-ms-input-placeholder {color: #E8DBD3;}
 
 .form-subscribe .btn {
 	transition: all .35s;
